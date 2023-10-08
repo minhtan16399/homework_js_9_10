@@ -42,7 +42,8 @@ function Employee() {
 };
 // xác định ký tự trống
 function emptyInpput(input) {
-    if (input === '') {
+    let emptyValid = /^(\s+)$/;
+    if (emptyValid.test(input) || input == '') {
         return false;
     } else {
         return true;
@@ -58,7 +59,7 @@ function lettersValid(input) {
     }
 };
 //  định dạng email
-function emailFormat (input) {
+function emailFormat(input) {
     let mailFormat = /^\w+([\.-]\w+)*@\w+([\.-]\w+)*(\.\w{2,3})+$/;
     if (input.match(mailFormat)) {
         return true;
@@ -67,22 +68,42 @@ function emailFormat (input) {
     }
 };
 // định dạng mật khẩu ít nhất(1 ký tự số, 1 ký tự đặc biệt, 1 ký tự in hoa)
-function passwordValid (input) {
+function passwordValid(input) {
     let passWords = /^(\w{1,}|[^A-Z]+|[^0-9]+)$/;
-    if  (passWords.test(input)) {
+    if (passWords.test(input)) {
         return false;
     } else {
         return true;
     }
-}
+};
+
 // xác định độ dài ký tự
-function lengthValid (input, max, min) {
+function lengthValid(input, max, min) {
     if (input.length < min || input.length > max) {
         return false;
     } else {
         return true;
     }
-}
+};
+// định dạng ngày tháng năm dd/mm/yyyy
+function dateFormat(input) {
+    let dateFormValid = /^(\d{2,2}\/\d{2,2}\/\d{4,4})$/;
+    if (dateFormValid.test(input)) {
+        return true;
+    } else {
+        return false;
+    }
+};
+// xác định min - max input
+function minToMaxValid(input, min, max) {
+    if (input < min || input > max) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+
 
 
 
