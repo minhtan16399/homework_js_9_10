@@ -10,20 +10,20 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Bootstrap 4 -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/css/bootstrap.min.css">
 
 	<!-- JQuery UI -->
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="./assets/css/jquery-ui.min.css">
 
 	<!-- Animate -->
 	<!-- <link rel="stylesheet" href="css/animate.css"> -->
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="css/modal.css">
+	<link rel="stylesheet" href="./assets/css/modal.css">
 
-	<link rel="stylesheet" href="css/style4.css">
+	<link rel="stylesheet" href="./assets/css/style4.css">
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="./assets/css/main.css">
 </head>
 
 <body>
@@ -127,7 +127,7 @@
 									<input type="text" class="form-control" placeholder="Loại nhân viên"
 										id="searchName">
 									<div class="input-group-prepend">
-										<span class="input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
+										<span class=" input-group-text" id="btnTimNV"><i class="fa fa-search"></i></span>
 									</div>
 								</div>
 							</div>
@@ -188,7 +188,7 @@
 				<!-- Modal body -->
 				<div class="modal-body">
 
-					<form role="form">
+					<form role="form" id="formNhanVien">
 
 						<div class="form-group">
 							<div class="input-group">
@@ -291,6 +291,7 @@
 				<!-- Modal footer -->
 				<div class="modal-footer" id="modal-footer">
 					<button id="btnThemNV" type="button" class="btn btn-success">Thêm người dùng</button>
+					<button id="btnXoaNV" type="button" class="btn btn-success">Xóa</button>
 					<button id="btnCapNhat" type="button" class="btn btn-success">Cập nhật</button>
 					<button id="btnDong" type="button" class="btn btn-danger" data-dismiss="modal">Đóng</button>
 				</div>
@@ -300,15 +301,15 @@
 	</div>
 
 	<!-- Bootstrap -->
-	<script src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.min.js"></script>
-	<script type="text/javascript" src="js/popper.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="./assets/libs/jquery.min.js"></script>
+	<script type="text/javascript" src="./assets/libs/jquery.easing.min.js"></script>
+	<script type="text/javascript" src="./assets/libs/popper.min.js"></script>
+	<script type="text/javascript" src="./assets/libs/bootstrap.min.js"></script>
 
 	<!-- Date Picker -->
 	<!-- <script src="js/jquery-ui.min.js"></script> -->
-	<script src="./js/jquery-ui.js"></script>
-	<script src="js/datepicker.js"></script>
+	<script src="./assets/libs/jquery-ui.js"></script>
+	<script src="./assets/libs/datepicker.js"></script>
 
 	<!-- Wow -->
 	<!-- <script src="js/wow.min.js"></script>	
@@ -317,8 +318,9 @@
 	</script>  -->
 
 	<!-- <script src="js/modal.js"></script> -->
-	<script src="./js/qlnv.js"></script>
-	<script src="./js/index.js"></script>
+	<script src="./util/method.js"></script>
+	<script src="./models/qlnv.js"></script>
+	<script src="./controllers/index.js"></script>
 
 	<script type="text/javascript">
 		$(document).ready(function () {
@@ -330,3 +332,4 @@
 </body>
 
 </html>
+
